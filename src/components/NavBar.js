@@ -33,7 +33,6 @@ const NavBar = () => {
                     &lt;Vincent&gt;
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav">
-                    <span className="navbar-toggle-icon"></span>
                 </Navbar.Toggle>
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
@@ -48,6 +47,7 @@ const NavBar = () => {
                     </Nav>
                     <span className="navbar-text">
                    <div className="social-icon">
+
               <a
                   href="https://www.linkedin.com/in/vincenthphung/"
                   target="_blank"
