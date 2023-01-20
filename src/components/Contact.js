@@ -58,7 +58,7 @@ const Contact = () => {
                     <Row className="align-items-center">
 
                         {/*<Col md={6}>*/}
-                            <h2> Get In Touch </h2>
+                            <h2> Contact Me </h2>
                             <form onSubmit={handleSubmit}>
                                 <Row>
                                     <Col sm={6} className="px-1">

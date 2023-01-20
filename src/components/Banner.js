@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
-import { Container, Row, Col } from "react-bootstrap";
-import { ArrowRightCircle } from "react-bootstrap-icons";
+import {useEffect, useState} from "react";
+import {Col, Container, Row} from "react-bootstrap";
+import {ArrowRightCircle} from "react-bootstrap-icons";
 import headerImg from "../assets/img/portfolio.png";
 import TrackVisibility from "react-on-screen";
 import "animate.css";
@@ -12,10 +12,10 @@ const Banner = () => {
     const [isComplete, setIsComplete] = useState(false);
     const wordList = [
         "Software Engineer",
-        "Outgoing Introvert",
-        "Passionate Aries",
-        "Dog Lover",
-        "Traveler",
+        "Troubleshooter",
+        "Problem Solver",
+        "Dog Parent",
+        "Explorer",
     ];
     // the component needs to know the word that is being displayed (starts with letters)
     const [text, setText] = useState("");
@@ -56,7 +56,7 @@ const Banner = () => {
                 <Row className="align-items-center">
                     <Col xs={12} md={6} xl={7}>
                         <TrackVisibility>
-                            {({ isVisible }) => (
+                            {({isVisible}) => (
                                 <div
                                     className={
                                         isVisible ? "animate__animated animate__bounce" : ""
@@ -66,18 +66,19 @@ const Banner = () => {
                                     <h1>I'm Vincent</h1>
                                     <h2 className="wrap">{text}</h2>
                                     <p>
-                                        I'm a <b>full stack software engineer</b> whose fire and passion
-                                        for problem-solving and creativity was reignited once making
-                                        the leap into the tech industry. Prior to software
-                                        engineering, I was a year in dental school. After some
-                                        self-reflection, I decided to apply to Hack Reactor's
-                                        accelerated coding bootcamp, which I completed in December 2022.
-                                        I love the ever-changing programming landscape and continuous
-                                        learning to create useful software for users.
-                                    </p>
-                                    <p>
-                                        I am now <i><b>open to work</b></i> and look forward to the opportunity to grow as
-                                        a software engineer.
+                                       
+
+                                        I am a full stack software engineer. My passion for problem-solving and
+                                        creativity flourished when I transitioned into the tech industry. Prior to
+                                        becoming a software engineer, I was in dental school. However, after some
+                                        self-reflection, I realized my true calling was in technology, and enrolled in
+                                        Hack Reactor's accelerated coding bootcamp. I graduated in December 2022, and
+                                        have been expanding my skills ever since. I am fascinated by the ever-evolving
+                                        programming landscape and am constantly seeking to create useful and innovative
+                                        software for users. I am eager to continue growing as a professional and
+                                        creating impactful projects in the future.
+
+
                                     </p>
                                     <button onClick={() => console.log("connect")}>
                                         Let's Connect{" "}
@@ -88,7 +89,7 @@ const Banner = () => {
                         </TrackVisibility>
                     </Col>
                     <Col xs={12} md={6} xl={5}>
-                        <img src={headerImg} alt="Header Img" />
+                        <img src={headerImg} alt="Header Img"/>
                     </Col>
                 </Row>
             </Container>

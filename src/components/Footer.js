@@ -1,9 +1,7 @@
-import {Container, Row, Col} from "react-bootstrap"
+import {Col, Container, Row} from "react-bootstrap"
 import github from "../assets/img/github.svg";
 import linkedIn from "../assets/img/linkedin.svg";
-import {
-    SiGithub, SiLinkedin
-} from 'react-icons/si';
+
 
 const Footer = () => {
     return (
@@ -27,7 +25,7 @@ const Footer = () => {
                                 <img src={github}/>
                             </a>
                         </div>
-                        <p>Thanks for stopping by!</p>
+                        <p>Get in touch!</p>
                     </Col>
                     <Col xs={6} sm={6} className="align-self-end">
                         <a href="#home">
