@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import { Navbar, Nav, Container } from 'react-bootstrap';
+import {useState, useEffect} from 'react';
+import {Navbar, Nav, Container} from 'react-bootstrap';
 import github from '../assets/img/github.svg';
 import linkedIn from '../assets/img/linkedin.svg';
 
@@ -30,9 +30,8 @@ const NavBar = () => {
             <Container>
                 <Navbar.Brand href='/'>&lt;Vincent&gt;</Navbar.Brand>
                 <Navbar.Toggle aria-controls='basic-navbar-nav'>
-                    {/*<span className='navbar-toggle-icon'></span>*/}
-
                 </Navbar.Toggle>
+
                 <Navbar.Collapse id='basic-navbar-nav'>
                     <Nav className='me-auto'>
                         <Nav.Link
@@ -73,21 +72,20 @@ const NavBar = () => {
                         </Nav.Link>
                     </Nav>
 
-                    <span className='navbar-toggler-icon'>
+
+                    <span className='navbar-text'>
 						<div className='social-icon'>
-							<a
-                                href='https://www.linkedin.com/in/vincenthphung/'
-                                target='_blank'
-                                rel='noreferrer'
+							<a href='https://www.linkedin.com/in/vincenthphung/'
+                               target='_blank'
+                               rel='noreferrer'
                             >
-								<img src={linkedIn} alt='Linkedin' />
+								<img src={linkedIn} alt='Linkedin'/>
 							</a>
-							<a
-                                href='https://github.com/vincenthphung'
-                                target='_blank'
-                                rel='noreferrer'
+							<a href='https://github.com/vincenthphung'
+                               target='_blank'
+                               rel='noreferrer'
                             >
-								<img src={github} alt='Github' />
+								<img src={github} alt='Github'/>
 							</a>
 						</div>
 						<a href='#connect'>
@@ -96,7 +94,9 @@ const NavBar = () => {
 							</button>
 						</a>
 					</span>
+
                 </Navbar.Collapse>
+
             </Container>
         </Navbar>
     );
