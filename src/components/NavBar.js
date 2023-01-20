@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import {useState, useEffect} from 'react';
 import {Navbar, Nav, Container} from 'react-bootstrap';
+=======
+import { useState, useEffect } from 'react';
+import { Navbar, Nav, Container } from 'react-bootstrap';
+>>>>>>> main
 import github from '../assets/img/github.svg';
 import linkedIn from '../assets/img/linkedin.svg';
 
@@ -29,6 +34,7 @@ const NavBar = () => {
         <Navbar expand='lg' className={scrolled ? 'scrolled' : ''}>
             <Container>
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <Navbar.Brand href="#/">
                     &lt;Vincent&gt;
                 </Navbar.Brand>
@@ -39,6 +45,13 @@ const NavBar = () => {
 >>>>>>> codespace
                 </Navbar.Toggle>
 
+=======
+                <Navbar.Brand href='/'>&lt;Vincent&gt;</Navbar.Brand>
+                <Navbar.Toggle aria-controls='basic-navbar-nav'>
+                    {/*<span className='navbar-toggle-icon'></span>*/}
+
+                </Navbar.Toggle>
+>>>>>>> main
                 <Navbar.Collapse id='basic-navbar-nav'>
                     <Nav className='me-auto'>
                         <Nav.Link
@@ -78,6 +91,7 @@ const NavBar = () => {
                             Contact Me
                         </Nav.Link>
                     </Nav>
+<<<<<<< HEAD
 <<<<<<< HEAD
                     <span className="navbar-text">
                    <div className="social-icon">
@@ -119,6 +133,24 @@ const NavBar = () => {
                                rel='noreferrer'
                             >
 								<img src={github} alt='Github'/>
+=======
+
+                    <span className='navbar-toggler-icon'>
+						<div className='social-icon'>
+							<a
+                                href='https://www.linkedin.com/in/vincenthphung/'
+                                target='_blank'
+                                rel='noreferrer'
+                            >
+								<img src={linkedIn} alt='Linkedin' />
+							</a>
+							<a
+                                href='https://github.com/vincenthphung'
+                                target='_blank'
+                                rel='noreferrer'
+                            >
+								<img src={github} alt='Github' />
+>>>>>>> main
 							</a>
 						</div>
 						<a href='#connect'>
@@ -127,8 +159,11 @@ const NavBar = () => {
 							</button>
 						</a>
 					</span>
+<<<<<<< HEAD
 
 >>>>>>> codespace
+=======
+>>>>>>> main
                 </Navbar.Collapse>
 
             </Container>
