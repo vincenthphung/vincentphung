@@ -105,6 +105,7 @@ nav.navbar a.navbar-brand {
     font-weight: 800;
     width: 12%;
     color: #A9FE75 !important;
+
 }
 
 nav.navbar .navbar-nav .nav-link.navbar-link {
@@ -159,7 +160,6 @@ span.navbar-text {
 
 .social-icon a:hover::before {
     background-color: rgba(168, 226, 186, .9);
-    /*background-color: #5F4845;*/
     border: 2px solid #A9FE75;
 }
 
@@ -195,6 +195,7 @@ span.navbar-text {
     width: 0%;
     height: 100%;
     position: absolute;
+    /*background-color: #fff;*/
     background-color: rgba(168, 226, 186, .9);
     left: 0;
     top: 0;
@@ -264,6 +265,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
 
 nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     border-color: transparent;
+
 }
 
 /************ Banner CSS ************/
