@@ -3,6 +3,7 @@ import ProjectCard from './ProjectCard';
 import projImg1 from '../assets/img/direct-rep.gif';
 import projImg2 from '../assets/img/carcar1.gif';
 import projImg3 from '../assets/img/conferencego1.gif';
+import projImg4 from '../assets/img/wardrobify1.gif';
 import 'animate.css';
 
 const Projects = () => {
@@ -13,7 +14,7 @@ const Projects = () => {
                 'A tool that utilizes AI to craft individualized communications to elected officials for US residents on specific topics and positions',
             imgUrl: projImg1,
             gitUrl: 'https://github.com/vincenthphung/direct-rep',
-            technologies: 'React, Redux, Python, FastAPI, Docker, PostgreSQL',
+            technologies: 'React, Redux, Python, FastAPI, Docker, PostgreSQL, Docker',
         },
         {
             title: 'Auto Ease',
@@ -21,7 +22,7 @@ const Projects = () => {
                 'Car Service Management and Sales System, designed to streamline the process of scheduling appointments and managing sales for an automotive business.',
             imgUrl: projImg2,
             gitUrl: 'https://github.com/vincenthphung/auto-ease',
-            technologies: 'Python Django PostgreSQL React Docker',
+            technologies: 'Python, Django, PostgreSQL, React, Bootstrap, Docker',
         },
         {
             title: 'Conference Pro',
@@ -29,15 +30,15 @@ const Projects = () => {
                 'Conference Reservations and Organization Application that features the implementation of polling, message queues, and pub/sub via RabbitMQ to improve communication between microservices and enhance scalability.',
             imgUrl: projImg3,
             gitUrl: 'https://github.com/vincenthphung/conference-pro',
-            technologies: 'Django PostgreSQL React Docker RabbitMQ',
+            technologies: 'Python, Django, PostgreSQL, React, Docker, RabbitMQ',
         },
         {
             title: 'Wardrobify',
             description:
                 'Allows you to create a digital inventory of your wardrobe by easily taking photos of your clothes and categorizing them by type, color, and style.',
-            imgUrl: projImg3,
+            imgUrl: projImg4,
             gitUrl: 'https://github.com/vincenthphung/wardrobify',
-            technologies: 'FastAPI PostgreSQL React',
+            technologies: 'Javascript, React, Python, Django, PostgreSQL, Docker',
         },
     ];
 
