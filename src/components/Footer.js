@@ -25,7 +25,8 @@ const Footer = () => {
                                 <img src={github}/>
                             </a>
                         </div>
-                        <p>Get in touch!</p>
+                        <br/>
+                        <p>Copyright 2023 Vincent</p>
                     </Col>
                     <Col xs={6} sm={6} className="align-self-end">
                         <a href="#home">
