@@ -13,22 +13,20 @@
 	box-sizing: border-box;
 }
 
-body,
-h1,
-h2,
-p,
-a {
+body {
 	margin: 0;
 	padding: 0;
 	font-family: var(--font-family);
-	text-decoration: none;
-	color: var(--text-color);
-}
-
-body {
 	background-color: var(--bg-color);
+	color: var(--text-color);
 	line-height: 1.6;
 	overflow-x: hidden;
+}
+
+h1, h2, p, a {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
 }
 
 header {
@@ -50,6 +48,7 @@ header .container {
 }
 
 nav a {
+	color: var(--text-color);
 	margin: 0 10px;
 	font-size: 1rem;
 	padding: 0.5rem 1rem;
@@ -63,10 +62,8 @@ nav a:hover {
 	cursor: pointer;
 }
 
-/* Improved Button Styles */
-button,
-.cta-button,
-.submit-button {
+/* Button Styles */
+button, .cta-button, .submit-button {
 	display: inline-block;
 	padding: 10px 20px;
 	margin: 5px;
@@ -78,18 +75,15 @@ button,
 	cursor: pointer;
 	border: 1px solid transparent;
 	border-radius: 0.25rem;
-	transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-		border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+	transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
-button:focus,
-.cta-button:focus,
-.submit-button:focus {
+button:focus, .cta-button:focus, .submit-button:focus {
 	outline: none;
 	box-shadow: 0 0 0 0.2rem rgba(255, 215, 0, 0.25);
 }
 
-/* Specific Styles for Call to Action (CTA) Buttons */
+/* CTA Button Styles */
 .cta-button {
 	font-weight: bold;
 	color: var(--primary-color);
@@ -103,7 +97,7 @@ button:focus,
 	border-color: var(--primary-color);
 }
 
-/* Specific Styles for Submit Buttons in Forms */
+/* Submit Button Styles */
 .submit-button {
 	color: var(--text-color);
 	background-color: var(--secondary-color);
@@ -117,250 +111,15 @@ button:focus,
 }
 
 /* Responsive Adjustments */
-@media (max-width: 1200px) {
-	header .container,
-	.about-section .container,
-	.skills-section .container,
-	.projects-section .container,
-	.contact-section .container {
-		padding: 0 30px;
-	}
-}
-
-@media (max-width: 992px) {
-	.hero h1 {
-		font-size: 3rem;
-	}
-
-	.hero p {
-		font-size: 1.1rem;
-	}
-}
-
 @media (max-width: 768px) {
-	.navbar-toggler {
-		display: flex;
-	}
-
-	#navbar {
-		display: none;
-		position: absolute;
-		top: 100%;
-		left: 0;
-		right: 0;
-		background: var(--header-bg-color);
-		flex-direction: column;
-		align-items: center;
-		padding: 1rem 0;
-		[aria-expanded="false"] {
-			display: none;
-		}
-	}
-
-	#navbar.active {
-		display: flex;
-	}
-
-	nav a {
-		padding: 0.75rem 1.5rem;
-		text-align: center;
-		width: 100%;
-		display: block;
-	}
-
-	.about-section .row,
-	.about-section .about-text,
-	.about-section .about-image,
-	.skills-grid,
-	.projects-grid {
-		flex-direction: column;
-	}
-
-	.about-section .about-image {
-		margin-top: 1.5rem;
-	}
-
-	button,
-	.cta-button,
-	.submit-button {
-		width: 100%;
-		padding: 15px 20px;
+	button, .cta-button, .submit-button {
+			width: 100%;
+			padding: 15px 20px;
 	}
 }
 
-@media (max-width: 576px) {
-	.hero h1 {
-		font-size: 2.5rem;
-	}
-
-	.hero p,
-	.project-card,
-	.contact-section form {
-		font-size: 1rem;
-	}
-
-	.skills-grid {
-		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-	}
-
-	.projects-grid {
-		grid-template-columns: 1fr;
-	}
-
-	.project-card {
-		margin-bottom: 1.5rem;
-	}
-
-	.social-links a {
-		font-size: 1.2rem;
-	}
-}
-
-/* GitHub Link Styles */
-.github-link {
-	display: inline-block;
-	padding: 0.5rem 1rem;
-	margin-top: 0.5rem;
-	font-size: 1rem;
-	color: var(--text-color);
-	background-color: var(--bg-color);
-	border: 1px solid var(--text-color);
-	border-radius: 0.25rem;
-	text-align: center;
-	transition: all 0.3s ease;
-	text-decoration: none; /* Remove underline from links */
-}
-
-.github-link i {
-	margin-right: 0.5rem; /* Space between icon and text */
-	font-size: 1.25rem; /* Increase icon size */
-}
-
-.github-link:hover,
-.github-link:focus {
-	color: var(--primary-color);
-	background-color: var(--header-bg-color);
-	border-color: var(--primary-color);
-	text-decoration: none; /* Remove underline from links on hover */
-	transform: translateY(-2px); /* Slight lift on hover */
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow for depth */
-}
-
-.cta-button {
-	/* ... other styles ... */
-	overflow: hidden;
-	position: relative;
-	z-index: 1;
-	transition: color 0.3s, background-color 0.3s;
-}
-
-.cta-button::after {
-	content: "";
-	position: absolute;
-	z-index: -1;
-	left: 0;
-	right: 100%;
-	bottom: 0;
-	background: var(--primary-color);
-	height: 3px;
-	transition-property: right;
-	transition-duration: 0.3s;
-	transition-timing-function: ease-out;
-}
-
-.cta-button:hover::after {
-	right: 0;
-}
-
-:root {
-	--bg-color: #282c34;
-	--header-bg-color: #333;
-	--text-color: #f8f8f8;
-	--primary-color: #ffd700;
-	--secondary-color: #ff8c00;
-	--hover-light-color: #e6af05;
-	--font-family: "Poppins", sans-serif;
-	--base-font-size: 16px;
-}
-
-* {
-	box-sizing: border-box;
-}
-
-body,
-h1,
-h2,
-p,
-a {
-	margin: 0;
-	padding: 0;
-	font-family: var(--font-family);
-	text-decoration: none;
-}
-
-body {
-	background-color: var(--bg-color);
-	color: var(--text-color);
-	line-height: 1.6;
-	overflow-x: hidden;
-}
-
-header {
-	position: fixed;
-	width: 100%;
-	background: var(--header-bg-color);
-	padding: 1rem 0;
-	z-index: 1000;
-	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-header .container {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	max-width: 1200px;
-	margin: auto;
-	padding: 0 20px;
-}
-
-nav {
-	display: flex;
-	justify-content: flex-end;
-	align-items: center;
-}
-
-nav a {
-	color: var(--text-color);
-	margin: 0 10px;
-	font-size: 1rem;
-	padding: 0.5rem 1rem;
-	transition: all 0.3s ease;
-}
-
-nav a:hover {
-	color: var(--primary-color);
-	background-color: rgba(255, 255, 255, 0.1);
-	border-radius: 5px;
-	cursor: pointer;
-}
-
-.nav-toggle {
-	display: none;
-	position: absolute;
-	right: 20px;
-	top: 15px;
-	cursor: pointer;
-	z-index: 1001;
-}
-
-.nav-toggle div {
-	width: 30px;
-	height: 3px;
-	background: var(--text-color);
-	margin: 6px 0;
-	transition: all 0.3s;
-}
-
+/* Additional existing responsive styles... */
+/* Hero Section */
 .hero {
 	display: flex;
 	align-items: center;
@@ -552,7 +311,6 @@ nav a:hover {
 
 .project-card-info {
 	padding: 1rem;
-	/* 	background: rgba(0, 0, 0, 0.7); */
 	background: var(--header-bg-color);
 	color: var(--text-color);
 	transition: background-color 0.3s ease;
@@ -606,7 +364,7 @@ nav a:hover {
 
 .contact-section input,
 .contact-section textarea {
-	width: 100%;
+width: 100%;
 	padding: 0.75rem;
 	border-radius: 5px;
 	border: 1px solid #ddd;
@@ -678,334 +436,94 @@ footer {
 	.skills-section .container,
 	.projects-section .container,
 	.contact-section .container {
-		padding: 0 30px;
+			padding: 0 30px;
 	}
 }
 
 @media (max-width: 992px) {
 	.hero h1 {
-		font-size: 3rem;
+			font-size: 3rem;
 	}
 
 	.hero p {
-		font-size: 1.1rem;
+			font-size: 1.1rem;
 	}
 }
 
 @media (max-width: 768px) {
 	.navbar-toggler {
-		display: flex;
+			display: flex;
 	}
 
 	#navbar {
-		display: none;
-		position: absolute;
-		top: 100%;
-		left: 0;
-		right: 0;
-		background: var(--header-bg-color);
-		flex-direction: column;
-		align-items: center;
-		padding: 1rem 0;
+			display: none;
+			position: absolute;
+			top: 100%;
+			left: 0;
+			right: 0;
+			background: var(--header-bg-color);
+			flex-direction: column;
+			align-items: center;
+			padding: 1rem 0;
 	}
 
 	#navbar.active {
-		display: flex;
+			display: flex;
 	}
 
 	nav a {
-		padding: 0.75rem 1.5rem;
-		text-align: center;
-		width: 100%;
-		display: block;
+			padding: 0.75rem 1.5rem;
+			text-align: center;
+			width: 100%;
+			display: block;
 	}
 
 	.about-section .row,
 	.about-section .about-text,
 	.about-section .about-image {
-		flex-direction: column;
+			flex-direction: column;
 	}
 
 	.about-section .about-image {
-		margin-top: 1.5rem;
+			margin-top: 1.5rem;
 	}
 }
 
 @media (max-width: 576px) {
 	.hero h1 {
-		font-size: 2.5rem;
+			font-size: 2.5rem;
 	}
 
 	.hero p {
-		font-size: 1rem;
+			font-size: 1rem;
 	}
 
 	.skills-grid {
-		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 	}
 
 	.projects-grid {
-		grid-template-columns: 1fr;
+			grid-template-columns: 1fr;
 	}
 
 	.project-card {
-		margin-bottom: 1.5rem;
+			margin-bottom: 1.5rem;
 	}
 
 	.contact-section form {
-		width: 100%;
+			width: 100%;
 	}
 
 	.footer-content {
-		align-items: center;
+			align-items: center;
 	}
 
 	.social-links {
-		flex-direction: row;
-		justify-content: center;
+			flex-direction: row;
+			justify-content: center;
 	}
 
 	.social-links a {
-		font-size: 1.2rem;
-	}
-}
-
-:root {
-	--bg-color: #282c34;
-	--header-bg-color: #333;
-	--text-color: #f8f8f8;
-	--primary-color: #ffd700;
-	--secondary-color: #ff8c00;
-	--hover-light-color: #e6af05;
-	--font-family: "Poppins", sans-serif;
-	--base-font-size: 16px;
-}
-
-* {
-	box-sizing: border-box;
-}
-
-body,
-h1,
-h2,
-p,
-a {
-	margin: 0;
-	padding: 0;
-	font-family: var(--font-family);
-	text-decoration: none;
-}
-
-body {
-	background-color: var(--bg-color);
-	color: var(--text-color);
-	line-height: 1.6;
-	overflow-x: hidden;
-}
-
-header {
-	position: fixed;
-	width: 100%;
-	/*    background: var(--header-bg-color);*/
-	background-color: transparent;
-	padding: 1rem 0;
-	z-index: 1000;
-	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-header .container {
-	display: flex;
-	/*    justify-content: space-between;*/
-	justify-content: flex-end;
-	align-items: center;
-	max-width: 1200px;
-	margin: auto;
-	padding: 0 20px;
-}
-
-nav {
-	display: flex;
-	justify-content: flex-end;
-	align-items: center;
-}
-
-nav a {
-	color: var(--text-color);
-	margin: 0 10px;
-	font-size: 1rem;
-	padding: 0.5rem 1rem;
-	transition: all 0.3s ease;
-}
-
-nav a:hover {
-	color: var(--primary-color);
-	background-color: rgba(255, 255, 255, 0.1);
-	border-radius: 5px;
-	cursor: pointer;
-}
-
-/* ... other existing styles ... */
-
-/* Improved Button Styles */
-button,
-.cta-button,
-.submit-button {
-	display: inline-block;
-	padding: 10px 20px;
-	margin: 5px;
-	font-size: var(--base-font-size);
-	text-align: center;
-	text-decoration: none;
-	white-space: nowrap;
-	vertical-align: middle;
-	cursor: pointer;
-	border: 1px solid transparent;
-	border-radius: 0.25rem;
-	transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-		border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-}
-
-button:focus,
-.cta-button:focus,
-.submit-button:focus {
-	outline: none;
-	box-shadow: 0 0 0 0.2rem rgba(255, 215, 0, 0.25);
-}
-
-/* Specific Styles for Call to Action (CTA) Buttons */
-.cta-button {
-	font-weight: bold;
-	color: var(--primary-color);
-	background-color: transparent;
-	border-color: var(--primary-color);
-}
-
-.cta-button:hover {
-	color: var(--text-color);
-	background-color: var(--primary-color);
-	border-color: var(--primary-color);
-}
-
-/* Specific Styles for Submit Buttons in Forms */
-.submit-button {
-	color: var(--text-color);
-	background-color: var(--secondary-color);
-	border-color: var(--secondary-color);
-}
-
-.submit-button:hover {
-	color: var(--text-color);
-	background-color: var(--hover-light-color);
-	border-color: var(--hover-light-color);
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-	button,
-	.cta-button,
-	.submit-button {
-		width: 100%;
-		padding: 15px 20px;
-	}
-}
-
-/* ... other existing styles ... */
-
-/* Existing responsive design styles from your original CSS */
-@media (max-width: 1200px) {
-	header .container,
-	.about-section .container,
-	.skills-section .container,
-	.projects-section .container,
-	.contact-section .container {
-		padding: 0 30px;
-	}
-}
-
-@media (max-width: 992px) {
-	.hero h1 {
-		font-size: 3rem;
-	}
-
-	.hero p {
-		font-size: 1.1rem;
-	}
-}
-
-@media (max-width: 768px) {
-	.navbar-toggler {
-		display: flex;
-	}
-
-	#navbar {
-		display: none;
-		position: absolute;
-		top: 100%;
-		left: 0;
-		right: 0;
-		background: var(--header-bg-color);
-		flex-direction: column;
-		align-items: center;
-		padding: 1rem 0;
-	}
-
-	#navbar.active {
-		display: flex;
-	}
-
-	nav a {
-		padding: 0.75rem 1.5rem;
-		text-align: center;
-		width: 100%;
-		display: block;
-	}
-
-	.about-section .row,
-	.about-section .about-text,
-	.about-section .about-image {
-		flex-direction: column;
-	}
-
-	.about-section .about-image {
-		margin-top: 1.5rem;
-	}
-}
-
-@media (max-width: 576px) {
-	.hero h1 {
-		font-size: 2.5rem;
-	}
-
-	.hero p {
-		font-size: 1rem;
-	}
-
-	.skills-grid {
-		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-	}
-
-	.projects-grid {
-		grid-template-columns: 1fr;
-	}
-
-	.project-card {
-		margin-bottom: 1.5rem;
-	}
-
-	.contact-section form {
-		width: 100%;
-	}
-
-	.footer-content {
-		align-items: center;
-	}
-
-	.social-links {
-		flex-direction: row;
-		justify-content: center;
-	}
-
-	.social-links a {
-		font-size: 1.2rem;
+			font-size: 1.2rem;
 	}
 }
