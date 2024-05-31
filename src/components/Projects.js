@@ -4,8 +4,6 @@ import projImg1 from "../assets/img/direct-rep.gif"
 import projImg2 from "../assets/img/carcar1.gif"
 import projImg3 from "../assets/img/conferencego1.gif"
 import "animate.css";
-import Footer from "./Footer";
-import Contact from "./Contact";
 
 const Projects = () => {
     const projects = [
@@ -71,8 +69,6 @@ const Projects = () => {
                     })}
                 </Row>
             </Container>
-            <Contact/>
-            <Footer/>
         </section>
     );
 };

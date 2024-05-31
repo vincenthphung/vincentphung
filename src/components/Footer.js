@@ -1,9 +1,9 @@
 import {Container, Row, Col} from "react-bootstrap"
 import github from "../assets/img/github.svg";
 import linkedIn from "../assets/img/linkedin.svg";
-import {
-    SiGithub, SiLinkedin
-} from 'react-icons/si';
+// import {
+//     SiGithub, SiLinkedin
+// } from 'react-icons/si';
 
 const Footer = () => {
     return (
@@ -17,14 +17,14 @@ const Footer = () => {
                                 target="_blank"
                                 rel="noreferrer"
                             >
-                                <img src={linkedIn}/>
+                                <img src={linkedIn} alt="linkedin"/>
                             </a>
                             <a
                                 href="https://github.com/vincenthphung"
                                 target="_blank"
                                 rel="noreferrer"
                             >
-                                <img src={github}/>
+                                <img src={github} alt="github"/>
                             </a>
                         </div>
                         <p>Thanks for stopping by!</p>
