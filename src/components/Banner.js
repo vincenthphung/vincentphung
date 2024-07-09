@@ -1,37 +1,26 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { ArrowRightCircle } from "react-bootstrap-icons";
-import headerImg from "../assets/img/portfolio.png";
+import headerImg from "../assets/img/portfolio.png"; // Updated image path
 import TrackVisibility from "react-on-screen";
-import "animate.css";
+import 'animate.css';
 
 const Banner = () => {
-    // indicate index to which word is currently displayed on the screen
     const [loopNum, setLoopNum] = useState(0);
-    // is the type being typed out or deleted? default is false because we start by typing the word
     const [isComplete, setIsComplete] = useState(false);
-    const wordList = [
-        "Software Engineer",
-        "Outgoing Introvert",
-        "Passionate Aries",
-        "Dog Lover",
-        "Traveler",
-    ];
-    // the component needs to know the word that is being displayed (starts with letters)
+    const wordList = ["Software Engineer", "Outgoing Introvert", "Passionate Aries", "Dog Lover", "Traveler"];
     const [text, setText] = useState("");
-    // determines how fast one letter comes after the first one is typed and also the word is going to be deleted faster since when someone deletes it deletes faster
     const [delta, setDelta] = useState(200);
     const [index, setIndex] = useState(0);
 
-    // run this function to take care of typing or deleting
     useEffect(() => {
         let ticker = setInterval(() => {
             tick();
-        }, delta); // delta will be our interval when tick is getting fired off?
+        }, delta);
         return () => {
             clearInterval(ticker);
-        }; // once we set the interval and component unmount - we need to clear the interval that contains the ticker
-    }, [text]); // <-- we want it to run every time the text gets updated
+        };
+    }, [text]);
 
     const tick = () => {
         let i = loopNum % wordList.length;
@@ -57,11 +46,7 @@ const Banner = () => {
                     <Col xs={12} md={6} xl={7}>
                         <TrackVisibility>
                             {({ isVisible }) => (
-                                <div
-                                    className={
-                                        isVisible ? "animate__animated animate__bounce" : ""
-                                    }
-                                >
+                                <div className={isVisible ? "animate__animated animate__bounce" : ""}>
                                     <span className="tagline">&lt;Hello World /&gt;</span>
                                     <h1>I'm Vincent</h1>
                                     <h2 className="wrap">{text}</h2>
@@ -88,7 +73,7 @@ const Banner = () => {
                         </TrackVisibility>
                     </Col>
                     <Col xs={12} md={6} xl={5}>
-                        <img src={headerImg} alt="Header Img" />
+                        <img src={headerImg} alt="Header Img" className="header-img"/>
                     </Col>
                 </Row>
             </Container>
@@ -97,6 +82,3 @@ const Banner = () => {
 };
 
 export default Banner;
-
-
-
