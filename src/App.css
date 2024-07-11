@@ -1,11 +1,11 @@
 /************ Custom Font ************/
 @font-face {
-    font-family: Roboto-Medium;
+    font-family: 'Roboto-Medium';
     src: url('./assets/font/Roboto-Medium.ttf');
 }
 
 @font-face {
-    font-family: Roboto;
+    font-family: 'Roboto';
     src: url('./assets/font/Roboto-BoldItalic.ttf');
 }
 
@@ -435,93 +435,55 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     width: 56%;
 }
 
-.proj-imgbx {
-    position: relative;
-    border-radius: 15px;
+.project-card {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
     overflow: hidden;
+    transition: box-shadow 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 24px;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    height: 450px; /* Set a fixed height for all images */
+}
+
+.project-card:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.proj-imgbx {
+    padding: 0;
+    overflow: hidden;
 }
 
 .proj-imgbx img {
-    width: 100%;
+    object-fit: cover;
     height: 100%;
-    object-fit: cover; /* Ensure images cover the box */
-    transition: transform 0.3s ease-in-out;
+    width: 100%;
+    transition: transform 0.3s ease;
 }
 
-.proj-imgbx:hover img {
+.proj-imgbx img:hover {
     transform: scale(1.05);
 }
 
-.proj-imgbx::before {
-    content: "";
-    background: rgba(168, 226, 186, 0.9);
-    opacity: 0.85;
-    position: absolute;
-    width: 100%;
-    height: 0;
-    transition: height 0.4s ease-in-out;
-}
-
-.proj-imgbx:hover::before {
-    height: 100%;
-}
-
 .proj-txtx {
-    position: absolute;
-    text-align: center;
-    top: 65%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    transition: top 0.5s ease-in-out, opacity 0.5s ease-in-out;
-    opacity: 0;
-    width: 90%;
-    color: #253a52;
-}
-
-.proj-imgbx:hover .proj-txtx {
-    top: 50%;
-    opacity: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .proj-txtx h4 {
-    font-size: 24px;
-    font-weight: 700;
-    letter-spacing: 0.8px;
-    line-height: 1.1em;
-    margin-bottom: 8px;
+    margin-top: 0;
 }
 
-.proj-txtx span {
-    font-weight: 400;
-    font-size: 16px;
-    letter-spacing: 0.8px;
-    line-height: 1.1em;
-    display: block;
-    margin-bottom: 8px;
+.proj-txtx p {
+    margin-bottom: 10px;
 }
 
-.proj-txtx div {
-    font-weight: 400;
-    font-size: 14px;
-    letter-spacing: 0.8px;
-    line-height: 1.1em;
-    display: block;
-    margin-bottom: 8px;
-}
-
-.proj-txtx a {
-    color: #253a52;
-    font-weight: 600;
-    font-size: 16px;
-    text-decoration: none;
-    transition: color 0.3s ease-in-out;
-}
-
-.proj-txtx a:hover {
-    color: #A9FE75;
+.proj-txtx a.btn {
+    align-self: start;
+    margin-top: auto;
 }
 
 /************ Contact CSS ************/

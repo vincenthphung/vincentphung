@@ -81,11 +81,9 @@ const Projects = () => {
                         </div>
                     </Col>
                 </Row>
-                <Row xs={1} sm={1} md={1} lg={2} xl={2} xxl={2} className="d-flex justify-content-center">
-                    {projects.map((project, index) => {
-                        return <ProjectCard key={index} {...project} />;
-                    })}
-                </Row>
+                {projects.map((project, index) => {
+                    return <ProjectCard key={index} {...project} />;
+                })}
             </Container>
         </section>
     );

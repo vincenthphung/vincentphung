@@ -1,20 +1,20 @@
-import { Col } from "react-bootstrap";
+import { Col, Row } from "react-bootstrap";
 
 const ProjectCard = ({ title, description, imgUrl, gitUrl, technologies }) => {
     return (
-        <Col xs={12} sm={6} md={4} lg={4} xl={3}>
-            <div className="proj-imgbx">
-                <img src={imgUrl} alt={title} />
-                <div className="proj-txtx">
-                    <h4>{title}</h4>
-                    <span>{description}</span>
-                    <div>{technologies}</div>
-                    <a href={gitUrl} target="_blank" rel="noopener noreferrer">
-                        View Code
-                    </a>
-                </div>
-            </div>
-        </Col>
+        <Row className="project-card mb-4">
+            <Col md={6} className="proj-imgbx p-0">
+                <img src={imgUrl} alt={title} className="w-100 h-100"/>
+            </Col>
+            <Col md={6} className="proj-txtx d-flex flex-column justify-content-center">
+                <h4 className="text-uppercase">{title}</h4>
+                <p>{description}</p>
+                <div><small>{technologies}</small></div>
+                <a href={gitUrl} target="_blank" rel="noopener noreferrer" className="btn btn-primary mt-2">
+                    View Code
+                </a>
+            </Col>
+        </Row>
     );
 };
 
