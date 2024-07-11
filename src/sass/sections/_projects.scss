@@ -1,0 +1,380 @@
+//// Projects Section
+//#projects {
+//  background-color: $white-color;
+//  color: $dark-blue-text;
+//  margin-top: -10rem;
+//  padding-top: 15rem;
+//
+//  @include respond(tab-land) {
+//    margin-top: 0;
+//    padding-top: 5rem;
+//  }
+//
+//  .project-wrapper {
+//    margin-bottom: 5rem;
+//    padding: 2rem;
+//    border-radius: 10px;
+//
+//    @include respond(phone) {
+//      margin-bottom: 2rem;
+//    }
+//
+//    .row {
+//      flex-direction: column;
+//      margin-bottom: 2rem;
+//
+//      @include respond(phone) {
+//        margin-bottom: 1rem;
+//      }
+//    }
+//
+//    &__text {
+//      text-align: left;
+//      margin-bottom: 2.5rem;
+//
+//      @include respond(tab-land) {
+//        margin-bottom: 2rem;
+//      }
+//
+//      &-title {
+//        font-weight: bold;
+//        margin-bottom: 1.8rem;
+//        font-size: 2.5rem;
+//
+//        @include respond(phone) {
+//          font-size: 3rem;
+//        }
+//      }
+//
+//      p > a {
+//        color: $secondary-color;
+//      }
+//    }
+//
+//    &__image {
+//      width: 90%;
+//      margin: 0 auto 20px auto;
+//
+//      @include respond(tab-land) {
+//        width: 100%;
+//        margin: 0 0 20px 0;
+//      }
+//
+//      .thumbnail {
+//        border: none;
+//        border-radius: 15px;
+//        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+//        transition: transform 0.5s cubic-bezier(0.155, 1.105, 0.295, 1.12), box-shadow 0.5s;
+//        margin-bottom: 4rem;
+//
+//        @include respond(phone) {
+//          border: 1px solid $light-grey;
+//          box-shadow: none;
+//          margin-bottom: 3.2rem;
+//        }
+//      }
+//    }
+//  }
+//}
+//
+//// Responsive Design for Projects Section
+//@media (max-width: 768px) {
+//  .project-wrapper {
+//    flex-direction: column;
+//
+//    &__text,
+//    &__image {
+//      order: 0;
+//      padding: 0;
+//    }
+//
+//    &__image {
+//      margin-bottom: 20px;
+//    }
+//  }
+//}
+
+
+
+// Projects Section
+//#projects {
+//  background-color: $white-color;
+//  color: $dark-blue-text;
+//  margin-top: -10rem;
+//  padding-top: 15rem;
+//
+//  @include respond(tab-land) {
+//    margin-top: 0;
+//    padding-top: 5rem;
+//  }
+//
+//  .project-wrapper {
+//    margin-bottom: 5rem;
+//    padding: 2rem;
+//    border-radius: 10px;
+//
+//    @include respond(phone) {
+//      margin-bottom: 2rem;
+//    }
+//
+//    .row {
+//      margin-bottom: 2rem;
+//
+//      @include respond(phone) {
+//        margin-bottom: 1rem;
+//      }
+//    }
+//
+//    &__text {
+//      text-align: left;
+//      margin-bottom: 2.5rem;
+//
+//      @include respond(tab-land) {
+//        margin-bottom: 2rem;
+//      }
+//
+//      &-title {
+//        font-weight: bold;
+//        margin-bottom: 1.8rem;
+//        font-size: 2.5rem;
+//
+//        @include respond(phone) {
+//          font-size: 3rem;
+//        }
+//      }
+//
+//      p > a {
+//        color: $secondary-color;
+//      }
+//    }
+//
+//    &__image {
+//      width: 90%;
+//      margin: 0 auto;
+//
+//      @include respond(tab-land) {
+//        width: 100%;
+//        margin: 0;
+//      }
+//
+//      .thumbnail {
+//        border: none;
+//        border-radius: 15px;
+//        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+//        transition: transform 0.5s cubic-bezier(0.155, 1.105, 0.295, 1.12), box-shadow 0.5s;
+//        margin-bottom: 4rem;
+//
+//        @include respond(phone) {
+//          border: 1px solid $light-grey;
+//          box-shadow: none;
+//          margin-bottom: 3.2rem;
+//        }
+//      }
+//    }
+//
+//    // Alternating Layouts for Projects
+//    &:nth-child(odd) {
+//      flex-direction: row;
+//
+//      .project-wrapper__text {
+//        order: 2;
+//        padding-left: 20px;
+//
+//        @include respond(phone) {
+//          order: 0;
+//          padding-left: 0;
+//        }
+//      }
+//
+//      .project-wrapper__image {
+//        order: 1;
+//
+//        @include respond(phone) {
+//          order: 0;
+//        }
+//      }
+//    }
+//
+//    &:nth-child(even) {
+//      flex-direction: row-reverse;
+//
+//      .project-wrapper__text {
+//        order: 1;
+//        padding-right: 20px;
+//
+//        @include respond(phone) {
+//          order: 0;
+//          padding-right: 0;
+//        }
+//      }
+//
+//      .project-wrapper__image {
+//        order: 2;
+//
+//        @include respond(phone) {
+//          order: 0;
+//        }
+//      }
+//    }
+//  }
+//}
+//
+//// Responsive Design for Projects Section
+//@media (max-width: 768px) {
+//  .project-wrapper {
+//    flex-direction: column;
+//
+//    &__text,
+//    &__image {
+//      order: 0;
+//      padding: 0;
+//    }
+//
+//    &__image {
+//      margin-bottom: 20px;
+//    }
+//  }
+//}
+//
+
+
+
+// Projects Section
+#projects {
+  background-color: $white-color;
+  color: $dark-blue-text;
+  margin-top: -10rem;
+  padding-top: 15rem;
+
+  @include respond(tab-land) {
+    margin-top: 0;
+    padding-top: 5rem;
+  }
+
+  .project-wrapper {
+    margin-bottom: 5rem;
+    padding: 2rem;
+    border-radius: 10px;
+
+    @include respond(phone) {
+      margin-bottom: 2rem;
+    }
+
+    .row {
+      margin-bottom: 2rem;
+
+      @include respond(phone) {
+        margin-bottom: 1rem;
+      }
+    }
+
+    &__text {
+      text-align: left;
+      margin-bottom: 2.5rem;
+
+      @include respond(tab-land) {
+        margin-bottom: 2rem;
+      }
+
+      &-title {
+        font-weight: bold;
+        margin-bottom: 1.8rem;
+        font-size: 2.5rem;
+
+        @include respond(phone) {
+          font-size: 3rem;
+        }
+      }
+
+      p > a {
+        color: $secondary-color;
+      }
+    }
+
+    &__image {
+      width: 90%;
+      margin: 0 auto;
+
+      @include respond(tab-land) {
+        width: 100%;
+        margin: 0;
+      }
+
+      .thumbnail {
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+        transition: transform 0.5s cubic-bezier(0.155, 1.105, 0.295, 1.12), box-shadow 0.5s;
+        margin-bottom: 4rem;
+
+        @include respond(phone) {
+          border: 1px solid $light-grey;
+          box-shadow: none;
+          margin-bottom: 3.2rem;
+        }
+      }
+    }
+
+    // Alternating Layouts for Projects
+    &:nth-child(odd) {
+      flex-direction: row;
+
+      .project-wrapper__text {
+        order: 2;
+        padding-left: 20px;
+
+        @include respond(phone) {
+          order: 0;
+          padding-left: 0;
+        }
+      }
+
+      .project-wrapper__image {
+        order: 1;
+
+        @include respond(phone) {
+          order: 0;
+        }
+      }
+    }
+
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+
+      .project-wrapper__text {
+        order: 1;
+        padding-right: 20px;
+
+        @include respond(phone) {
+          order: 0;
+          padding-right: 0;
+        }
+      }
+
+      .project-wrapper__image {
+        order: 2;
+
+        @include respond(phone) {
+          order: 0;
+        }
+      }
+    }
+  }
+}
+
+// Responsive Design for Projects Section
+@media (max-width: 768px) {
+  .project-wrapper {
+    flex-direction: column;
+
+    &__text,
+    &__image {
+      order: 0;
+      padding: 0;
+    }
+
+    &__image {
+      margin-bottom: 20px;
+    }
+  }
+}
